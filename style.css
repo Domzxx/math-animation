@@ -1,0 +1,128 @@
+* { box-sizing: border-box; }
+:root {
+  color-scheme: dark;
+  --cyan: #42e8ff;
+  --purple: #a56bff;
+  --muted: #9aa8c8;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(56, 45, 130, .24), transparent 48%),
+    #050611;
+  color: #f4f5ff;
+  font-family: Inter, Arial, sans-serif;
+}
+.page { width: min(1120px, calc(100% - 36px)); margin: 0 auto; padding: 48px 0 28px; }
+.heading { text-align: center; margin-bottom: 30px; }
+.eyebrow { color: var(--cyan); font-size: 11px; letter-spacing: .28em; font-weight: 600; }
+h1 {
+  margin: 10px 0 8px;
+  font: 700 clamp(38px, 7vw, 68px)/1 Orbitron, sans-serif;
+  letter-spacing: .08em;
+  text-shadow: 0 0 24px rgba(66,232,255,.22);
+}
+h1 span { color: var(--purple); }
+.subtitle { color: var(--muted); font-size: 14px; }
+.visualizer-panel {
+  overflow: hidden;
+  border: 1px solid rgba(112, 126, 255, .32);
+  border-radius: 16px;
+  background: #070916;
+  box-shadow: 0 0 45px rgba(83, 69, 255, .12), 0 18px 60px rgba(0,0,0,.35);
+}
+#canvas-container { width: 100%; line-height: 0; }
+canvas { display: block; width: 100% !important; height: auto !important; }
+.panel-footer {
+  display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  padding: 13px 18px; border-top: 1px solid rgba(112,126,255,.18);
+  color: #8792b5; font-size: 10px; letter-spacing: .12em;
+}
+.live-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #4bffce; margin-right: 8px; box-shadow: 0 0 10px #4bffce; }
+.info {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px;
+}
+.info > div {
+  padding: 18px; border: 1px solid rgba(112,126,255,.2);
+  border-radius: 12px; background: rgba(12,15,35,.72);
+}
+h2 { color: var(--cyan); font: 600 11px Orbitron, sans-serif; letter-spacing: .15em; }
+.info p { color: #b6bfd8; font-size: 12px; line-height: 1.9; }
+.info p span { color: #56617f; margin: 0 5px; }
+kbd {
+  padding: 3px 6px; border: 1px solid #3a4267; border-radius: 4px;
+  color: #e8eaff; background: #151a33; font: 11px Inter, sans-serif;
+}
+.formula { color: #d7c5ff !important; }
+footer {
+  display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  margin-top: 26px; color: #66708f; font-size: 10px; letter-spacing: .1em;
+}
+@media (max-width: 700px) {
+  .page { width: min(100% - 20px, 1120px); padding-top: 30px; }
+  .info { grid-template-columns: 1fr; }
+  .panel-footer { font-size: 9px; }
+}
+
+
+.resources {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+.resource-card {
+  padding: 20px;
+  border: 1px solid rgba(112,126,255,.22);
+  border-radius: 12px;
+  background: rgba(12,15,35,.78);
+}
+.resource-kicker {
+  margin: 0 0 8px;
+  color: #9d83ff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .17em;
+}
+.resource-card h2 { margin: 0 0 12px; }
+.resource-card > p:not(.resource-kicker) {
+  color: #b6bfd8;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.resource-link {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  margin-top: 8px;
+  padding: 11px 14px;
+  border: 1px solid rgba(66,232,255,.5);
+  border-radius: 7px;
+  color: #75edff;
+  background: rgba(66,232,255,.08);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.resource-link:hover { background: rgba(66,232,255,.16); }
+.source-list { list-style: none; padding: 0; margin: 0; }
+.source-list li { padding: 9px 0; border-top: 1px solid rgba(112,126,255,.14); }
+.source-list a { color: #8eeeff; font-size: 12px; font-weight: 600; text-decoration: none; }
+.source-list a:hover { text-decoration: underline; }
+.source-list span { display: block; margin-top: 4px; color: #929dbb; font-size: 11px; line-height: 1.6; }
+.ai-disclosure {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 13px 16px;
+  border-left: 2px solid #9d83ff;
+  background: rgba(157,131,255,.06);
+  color: #929dbb;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.ai-disclosure strong { color: #c6b6ff; }
+@media (max-width: 700px) {
+  .resources { grid-template-columns: 1fr; }
+  .ai-disclosure { grid-column: auto; }
+}

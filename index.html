@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEON WAVE | Mathematical Wave Animation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .student-info {
+      margin-top: 12px;
+      color: #aeb9dc;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .08em;
+    }
+    .student-info span {
+      color: #42e8ff;
+      margin: 0 7px;
+    }
+  </style>
+
+</head>
+<body>
+  <main class="page">
+    <header class="heading">
+      <p class="eyebrow">IT3 • MATH-BASED ANIMATION</p>
+      <h1>NEON <span>WAVE</span></h1>
+      <p class="subtitle">A visual exploration of sine waves, amplitude, frequency, and time.</p>
+      <p class="student-info">Prince Dominick T. Decena <span>•</span> BSIT2-B</p>
+    </header>
+
+    <section class="visualizer-panel" aria-label="Animated neon wave visualizer">
+      <div id="canvas-container"></div>
+      <div class="panel-footer">
+        <span><i class="live-dot"></i> LIVE MATHEMATICAL SIMULATION</span>
+        <span>p5.js • SINE FUNCTION</span>
+      </div>
+    </section>
+
+    <section class="info">
+      <div>
+        <h2>HOW TO INTERACT</h2>
+        <p><kbd>SPACE</kbd> Pause / resume <span>•</span> <kbd>↑</kbd> / <kbd>↓</kbd> Speed <span>•</span> <kbd>←</kbd> / <kbd>→</kbd> Amplitude <span>•</span> Click canvas: change colors</p>
+      </div>
+      <div>
+        <h2>THE MATHEMATICS</h2>
+        <p class="formula">y = centerY + amplitude × sin(frequency × x − speed × time + phase)</p>
+      </div>
+    </section>
+
+
+    <section class="resources">
+      <div class="resource-card demo-card">
+        <p class="resource-kicker">PROJECT PRESENTATION</p>
+        <h2>VIDEO DEMO</h2>
+        <p>Watch the demonstration video and project walkthrough in the shared Google Drive folder.</p>
+        <a class="resource-link" href="https://drive.google.com/drive/folders/1QfqP8Vax7h-M2zNFAtR6NFAuV-ABS5qX?usp=sharing" target="_blank" rel="noopener noreferrer">
+          Watch Final Output Video <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="resource-card">
+        <p class="resource-kicker">LEARNING MATERIALS</p>
+        <h2>REFERENCES &amp; SOURCES</h2>
+        <ul class="source-list">
+          <li><a href="https://p5js.org/reference/p5/sin/" target="_blank" rel="noopener noreferrer">p5.js Reference — sin()</a><span>How the sine function produces repeating values for wave motion.</span></li>
+          <li><a href="https://p5js.org/reference/p5/createCanvas/" target="_blank" rel="noopener noreferrer">p5.js Reference — createCanvas()</a><span>Creating the drawing canvas used by the animation.</span></li>
+          <li><a href="https://p5js.org/tutorials/get-started/" target="_blank" rel="noopener noreferrer">p5.js — Get Started</a><span>Project structure and the setup() and draw() functions.</span></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" target="_blank" rel="noopener noreferrer">MDN Web Docs — Math.sin()</a><span>Explanation of sine values and radians in JavaScript.</span></li>
+        </ul>
+      </div>
+
+      <p class="ai-disclosure"><strong>AI &amp; Code Disclosure:</strong> ChatGPT was used to assist with brainstorming, drafting code, and preparing explanations. The project author should review, test, and understand all submitted code and disclose any additional sources or tools used.</p>
+    </section>
+
+    <footer>
+      <span>NEON WAVE — IT3 FINAL DRILL</span>
+      <span>Created with p5.js</span>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
